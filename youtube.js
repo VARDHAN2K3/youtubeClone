@@ -5,7 +5,8 @@ const contents = [{
         iconNum : 1,
         title : 'Talking Tech and AI with Google CEO Sundar Pichai!',
         chName : 'Marques Brownlee',
-        views : '3.4M views &#183 6 months ago'
+        views : '3.4M views &#183 6 months ago',
+        channelLink: '@mkbhd'
     },{
         link : 'mP0RAo9SKZk',
         thumbnailNum : 2,
@@ -13,7 +14,8 @@ const contents = [{
         iconNum : 2,
         title : 'Try Not To Laugh Challenge #9',
         chName : 'Markiplier',
-        views : '19M views &#183 4 yearss ago'
+        views : '19M views &#183 4 yearss ago',
+        channelLink: '@markiplier'
     },{
         link : 'FgjPQQeTh1w',
         thumbnailNum : 3,
@@ -21,7 +23,8 @@ const contents = [{
         iconNum : 3,
         title : 'Crazy Tik Toks Taken Moments Before DISASTER',
         chName : 'SSSniperWolf',
-        views : '12M views &#183 1 year ago'
+        views : '12M views &#183 1 year ago',
+        channelLink: '@SSSniperWolf'
     },{
         link : '094y1Z2wpJg',
         thumbnailNum : 4,
@@ -29,7 +32,8 @@ const contents = [{
         iconNum : 4,
         title : 'The Simplest Math Problem No One Can Solve-Collatz Conjecture',
         chName : 'Veritasium',
-        views : '18M views &#183 4 months ago'
+        views : '18M views &#183 4 months ago',
+        channelLink: '@veritasium'
     },{
         link : '86CQq3pKSUw',
         thumbnailNum : 5,
@@ -37,7 +41,8 @@ const contents = [{
         iconNum : 5,
         title : 'Kadane\'s Algorithm to Maximum Sum Subarray Problem',
         chName : 'CS Dojo',
-        views : '519k views &#183 5 years ago'
+        views : '519k views &#183 5 years ago',
+        channelLink: '@CSDojo'
     },{
         link : 'yXWw0_UfSFg',
         thumbnailNum : 6,
@@ -45,7 +50,8 @@ const contents = [{
         iconNum : 6,
         title : 'Anything You Can Fit In The Circle I\'ll Pay For',
         chName : 'MrBeast',
-        views : '141M views &#183 1 year ago'
+        views : '141M views &#183 1 year ago',
+        channelLink: '@MrBeast'
     },{
         link : 'fNVa1qMbF9Y',
         thumbnailNum : 7,
@@ -53,7 +59,8 @@ const contents = [{
         iconNum : 7,
         title : 'Why Planes Don\'t Fly Over Tibet',
         chName : 'RealLifeLore',
-        views : '6.6M views &#183 1 year ago'
+        views : '6.6M views &#183 1 year ago',
+        channelLink: '@RealLifeLore'
     },{
         link : 'lFm4EM1juls',
         thumbnailNum : 8,
@@ -61,7 +68,8 @@ const contents = [{
         iconNum : 8,
         title : 'Inside The World\'s Biggest Passenger Plane',
         chName : 'Tech Vision',
-        views : '3.7M views &#183 10 months ago'
+        views : '3.7M views &#183 10 months ago',
+        channelLink: '@adin'
     },{
         link : 'ixmxOlcrlUc',
         thumbnailNum : 9,
@@ -69,7 +77,8 @@ const contents = [{
         iconNum : 9,
         title : 'The SECRETE to Super Human STRENGTH',
         chName : 'ThenX',
-        views : '20M views &#183 3 years ago'
+        views : '20M views &#183 3 years ago',
+        channelLink: '@OFFICIALTHENXSTUDIOS'
     },{
         link : 'R2vXbFp5C9o',
         thumbnailNum : 10,
@@ -77,7 +86,8 @@ const contents = [{
         iconNum : 10,
         title : 'How The World\'s Largest Cruise Ship Makes 30,000 Meals Every Day',
         chName : 'Business Insider',
-        views : '14M views &#183 1 year ago'
+        views : '14M views &#183 1 year ago',
+        channelLink: '@BusinessInsider'
     },{
         link : '0nZuYyXET3s',
         thumbnailNum : 11,
@@ -85,7 +95,8 @@ const contents = [{
         iconNum : 11,
         title : 'Dubai\'s Crazy Underwater Train and Other things #Only in Dubai',
         chName : 'Destination Tips',
-        views : '3M views &#183 1 year ago'
+        views : '3M views &#183 1 year ago',
+        channelLink: '@Destinationtips'
     },{
         link : '9iMGFqMmUFs',
         thumbnailNum : 12,
@@ -93,7 +104,8 @@ const contents = [{
         iconNum : 12,
         title : 'What would happen if you didn\'t drink water?-MIA Nacamulli',
         chName : 'TED-Ed',
-        views : '12M views &#183 5 years ago'
+        views : '12M views &#183 5 years ago',
+        channelLink: '@TEDEd'
     }
 ];
 
@@ -102,14 +114,14 @@ contents.forEach(content =>{
     htmlContent += `
         <section class="video-grid">
             <div class="thumbnail-div">
-                <a href="https://www.youtube.com/watch?v=${content.link}">
+                <a href="https://www.youtube.com/watch?v=${content.link}" target="_blank">
                     <img class="channel-thumbnail" src="thumbnail-${content.thumbnailNum}.webp">
                 </a>
                 <div class="time-duration">${content.duration}</div>
             </div>
             <div class="video-content">
                 <div class="channel-icon-div">
-                    <a target="_self" href="youtube.com">
+                    <a target="_self" href="https://www.youtube.com/${content.channelLink}">
                         <img class="channel-icon" src="channel-${content.iconNum}.jpeg">
                     </a>
                     <div class="channel-toolTip">
